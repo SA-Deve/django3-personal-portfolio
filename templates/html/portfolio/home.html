@@ -1,0 +1,24 @@
+{% extends 'html/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+
+{% for a in about %}
+
+<div class="row justify-content-center my-3">
+    <div class="col-5 text-center">
+        <img src="{{ a.image.url }}" class="custom-img-home" alt="Arjun Narahari">
+    </div>
+</div>
+
+<div class="text-center">
+    <bold>
+        <h2>{{ a.title }}</h2>
+    </bold>
+</div>
+<h5 class="description-color">{{ a.description }}</h5>
+
+{% endfor %}
+
+{% endblock %}

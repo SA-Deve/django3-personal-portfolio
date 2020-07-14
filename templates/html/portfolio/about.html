@@ -1,0 +1,20 @@
+{% extends 'html/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+
+{% for a in about %}
+
+<div class="row justify-content-center my-3">
+    <div class="col-5">
+        <img src="{{ a.image.url }}" class="img-fluid" alt="">
+    </div>
+</div>
+
+<div class="text-center"><bold><h2>{{ a.title }}</h2></bold></div>
+<h4>{{ a.description }}</h4>
+
+{% endfor %}
+
+{% endblock %}

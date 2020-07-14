@@ -1,0 +1,13 @@
+{% extends 'html/base.html' %}
+
+
+{% block content %}
+
+<h1 class="text-center mt-5" id="projectdetailtitle">{{ item.title }}</h1>
+<br>
+<div class="text-center"><img src="{{ item.image.url }}" class="custom-img img-fluid mb-2"></div>
+<br>
+
+{{ item.description|safe }}
+
+{% endblock %}

@@ -1,0 +1,17 @@
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+.description-color{
+    color: #808080;
+}
+
+.custom-img-home{
+    width: 350px;
+    height: 400px;
+}
+
+.custom-img-project{
+    width: 300px;
+    height: 300px;
+}

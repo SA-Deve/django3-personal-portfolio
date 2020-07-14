@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arjun Narahari</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'portfolio/css/styles.css'%}">
+</head>
+<body>
+
+    <nav id="topNav" class="navbar navbar-expand-md navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'portfolio:home' %}">
+                <img src="{% static 'portfolio/logo.png' %}" width="30" height="30" class="d-inline-block align-top"
+                    alt="Arjun's Logo">
+                <span>Arjun Narahari</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse text-center" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'portfolio:project' %}">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% static 'portfolio/Resume.pdf' %}">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.linkedin.com/in/arjun-narahari-01667078/" target="_blank">LinkedIn</a>
+                    </li>
+                    <li>
+                        <a role="button" href="{% url 'blog:home' %}" class="btn btn-primary">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        {% block content %}
+
+        {% endblock %}
+
+    </div>
+    
+</body>
+</html>

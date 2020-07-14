@@ -1,0 +1,28 @@
+{% extends 'html/base.html' %}
+
+{% block content %}
+
+<h1 class="text-center mt-5" id="projectitle">My Projects</h1>
+
+<hr>
+<div class="row">
+    {% for project in projects %}
+    <div class="col-lg-4 col-md-6">
+        
+        {% if project.url %}
+        <a href="{{ project.url }}">
+            <img src="{{ project.image.url }}" class="custom-img img-fluid mb-2">
+        </a>
+        {% else %}
+        
+        <img src="{{ project.image.url }}" class="custom-img img-fluid mb-2">
+        {% endif %}
+        <a href="{% url 'portfolio:detail' project.id %}"><h3>{{ project.title }}</h3></a>
+        <p>{{ project.description|truncatechars:100 }}</p>
+        
+    </div>
+    {% endfor %}
+</div>
+
+
+{% endblock %}
